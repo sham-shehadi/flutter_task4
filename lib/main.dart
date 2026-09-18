@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CardProduct.dart';
 
 void main() {
   runApp(const MyApp());
@@ -171,336 +172,51 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(16),
           mainAxisExtent: 500,
           children: [
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
+            CardProduct(
+              image: 'pj/p2.jpg',
+              title: 'Cloud Hanging Chair',
+              price: '\$120.00',
+              onAddtocart: () {
+                Navigator.push(context,
                   MaterialPageRoute(
-                    builder: (context) => ProductDetailsPage(),
+                    builder: (context) => CheckoutPage(),
                   ),
                 );
               },
 
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(//شكل زر مستطيل
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFFFFFBF7),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'pj/p2.jpg',
-                        width: double.infinity,
-                        height: 350,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-
-                    SizedBox(height: 8),
-
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                           Text(
-                              'Cloud Hanging Chair',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF2F3E34),
-                              ),
-                            ),
-
-
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border,
-                              color: Color(0xFF6B9080),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Text(
-                        '\$120.00',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF6B9080),
-                        ),
-                      ),
-                    ),
-
-                    SizedBox(height: 10),
-
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => CheckoutPage(),
-                              ),
-                            );
-                          },
-
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFFFFB7C3),
-                            foregroundColor: Colors.white,
-
-                          ),
-
-                          child: Text('Add to Cart'),
-                        ),
-                      ),
-                    ),
-
-                    SizedBox(height: 10),
-                  ],
-                ),
-              ),
+              oniconpressed: () {},
             ),
+            CardProduct(
+              image: 'pj/p3.jpg',
+              title: 'Flower Bunny Lamp',
+              price: '\$35.00',
 
-    Container(
-    decoration: BoxDecoration(
-    color: Color(0xFFFFFBF7),
-    borderRadius: BorderRadius.circular(20),
-    ),
-    child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ProductDetailsPage(),
-            ),
-          );
-        },
-
-        style: TextButton.styleFrom(
-
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
-
-        child: Container(
-          decoration: BoxDecoration(
-            color: Color(0xFFFFFBF7),
-            borderRadius: BorderRadius.circular(20),
-          ),
-
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                  'pj/p3.jpg',
-                  width: double.infinity,
-                  height: 350,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
-              SizedBox(height: 8),
-
-
-                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                        'Flower Bunny Lamp',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF2F3E34),
-                        ),
-                      ),
-
-
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.favorite_border,
-                        color: Color(0xFF6B9080),
-                      ),
-                    ),
-                  ],
-                ),
-
-
-                 Text(
-                  '\$35.00',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF6B9080),
-                  ),
-                ),
-
-              SizedBox(height: 10),
-
-               SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CheckoutPage(),
-                        ),
-                      );
-                    },
-
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFFFB7C3),
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-
-                    child: Text('Add to Cart'),
-                  ),
-                ),
-
-
-              SizedBox(height: 10),
-            ],
-          ),
-        ),
-      ),
-      SizedBox(height: 10),
-    ],
-    ),
-    ),
-
-            TextButton(
-              onPressed: () {
+              onAddtocart: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProductDetailsPage(),
+                    builder: (context) => CheckoutPage(),
                   ),
                 );
               },
 
-              style: TextButton.styleFrom(
-
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFFFFFBF7),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'pj/p4.jpg',
-                        width: double.infinity,
-                        height: 350,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-
-                    SizedBox(height: 8),
-
-                     Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                         Text(
-                              'Cute Chick Tissue Box',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF2F3E34),
-                              ),
-                            ),
-
-
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite_border,
-                              color: Color(0xFF6B9080),
-                            ),
-                          ),
-                        ],
-                      ),
-
-
-                     Text(
-                        '\$18.00',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF6B9080),
-                        ),
-                      ),
-
-
-                    SizedBox(height: 10),
-
-                  SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => CheckoutPage(),
-                              ),
-                            );
-                          },
-
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFFFFB7C3),
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-
-                          child: Text('Add to Cart'),
-                        ),
-                      ),
-
-
-                    SizedBox(height: 10),
-                  ],
-                ),
-              ),
+              oniconpressed: () {},
             ),
+            CardProduct(
+              image: 'pj/p4.jpg',
+              title: 'Cute Chick Tissue Box',
+              price: '\$18.00',
 
+              onAddtocart: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CheckoutPage(),
+                  ),
+                );
+              },
+
+              oniconpressed: () {},
+            ),
           ],
       ),
           ],
